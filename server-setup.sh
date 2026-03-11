@@ -22,8 +22,8 @@ sudo chown -R $USER:$USER /var/www/teknikservis
 echo "⚙️  Nginx yapilandiriliyor..."
 sudo tee /etc/nginx/sites-available/teknikservis > /dev/null << 'NGINX'
 server {
-    listen 80;
-    server_name _;  # Buraya domain adini yaz (ornek: tms.erisci.com)
+    listen 3080;
+    server_name _;
 
     root /var/www/teknikservis;
     index index.html;
@@ -73,4 +73,4 @@ echo "   cat ~/.ssh/github_deploy  # Bu ciktiyi VDS_SSH_KEY olarak yapistir"
 echo ""
 echo "   VDS_PORT     = SSH portu (varsayilan: 22, degistirdiysen yaz)"
 echo ""
-echo "🌐 Sunucu IP adresini tarayicida ac: http://$(curl -s ifconfig.me)"
+echo "🌐 Sunucu IP adresini tarayicida ac: http://$(curl -s ifconfig.me):3080"
