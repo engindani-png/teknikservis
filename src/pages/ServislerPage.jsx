@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { T } from "../theme";
+import { NewQuoteModal } from "./TekliflerPage";
 import {
   Badge,
   Card,
@@ -479,16 +480,6 @@ export default function ServislerPage({ ctx }) {
   );
 }
 
-/* ─── Placeholder for NewQuoteModal (to be extracted separately) ─── */
-function NewQuoteModal({ ctx, serviceId, customerId, onClose }) {
-  return (
-    <Modal title="Yeni Teklif" onClose={onClose}>
-      <p style={{ fontSize: 13, color: T.textSub }}>
-        Teklif formu henüz bu modüle taşınmadı.
-      </p>
-    </Modal>
-  );
-}
 
 /* ═══════════ NewServiceModal ═══════════ */
 
