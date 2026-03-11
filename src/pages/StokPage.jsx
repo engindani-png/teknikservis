@@ -12,6 +12,7 @@ import {
   Modal,
   PageHeader,
   EmptyState,
+  SideLayout,
   SidePanel,
 } from "../components/shared";
 import {
